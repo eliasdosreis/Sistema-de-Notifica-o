@@ -9,19 +9,14 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./_cdn/fonticon.css">
     <link rel="stylesheet" href="./_cdn/style.css">
-    
 </head>
 <body>
 
-    <div class="trigger_notify_box">
-        <div class="trigger_notify trigger_notify_blue">
-            <p>Teste</p>
-            <span class="trigger_notify_timer"></span>
-        </div>
-    </div>
-
     <h1>Aplicação de Trigger Notify</h1>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <button class="call_trigger_blue">Me clica</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./_cdn/script.js"></script>
 </body>
 </html>

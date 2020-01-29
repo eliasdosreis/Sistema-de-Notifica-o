@@ -22,7 +22,7 @@
     bottom: 0;
     height: 4%;
     background: rgba(0,0,0,0.5);
-    width: 50%;
+    width: 0;
 }
 
 .trigger_notify{
@@ -36,6 +36,12 @@
 
 .trigger_notify_blue{
     background-color: #2980b9;
+    color: #fff;
+}
+
+
+.trigger_notify_green{
+    background-color: #27ae60;
     color: #fff;
 }
 

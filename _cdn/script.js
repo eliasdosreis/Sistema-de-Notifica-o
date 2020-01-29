@@ -1,0 +1,41 @@
+$(function(){
+
+
+    $('.call_trigger_blue').click(function(){
+        var param = [];
+        param['title'] = " Artigo Cadastrado com sucesso";
+        param['icon'] = "fi-torso-business";
+        param['color'] = "green";
+        param['timer'] = 10000;
+
+        TriggerNotify(param);
+   })
+    function TriggerNotify(data){
+
+        var triggerContent = "<div class='trigger_notify trigger_notify_"+data.color+"' style='left:100%; opacity: 0;'>";
+        triggerContent += "<p class='"+data.icon+"'>" +data.title + "</p>";
+        triggerContent += "<span class='trigger_notify_timer'></span>";
+        triggerContent += "</div>";
+        
+        $('body').prepend("<div class='trigger_notify_box'></div>");
+
+        $('.trigger_notify_box').prepend(triggerContent);
+        $('.trigger_notify').stop().animate({ 'left':'0','opacity':'1' },200,function(){
+            $(this).find('.trigger_notify_timer').animate({ 'width':'100%' }, data.timer ,'linear',function(){
+                
+                $(this).parent('.trigger_notify').animate({ 'left':'100%','opacity':'0' },function() {
+                    $(this).remove();
+                });
+            })
+        });
+
+        $('body').on('click','.trigger_notify',function() {
+            $(this).animate({ 'left':'100%','opacity':'0' },function() {
+                $(this).remove();
+            });
+        });
+
+    }
+    
+    TriggerNotify();
+});
