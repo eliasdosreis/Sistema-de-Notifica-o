@@ -6,7 +6,7 @@ $(function(){
         param['title'] = " Artigo Cadastrado com sucesso";
         param['icon'] = "fi-torso-business";
         param['color'] = "green";
-        param['timer'] = 10000;
+        param['timer'] = 5000;
 
         TriggerNotify(param);
    })
@@ -16,9 +16,11 @@ $(function(){
         triggerContent += "<p class='"+data.icon+"'>" +data.title + "</p>";
         triggerContent += "<span class='trigger_notify_timer'></span>";
         triggerContent += "</div>";
-        
-        $('body').prepend("<div class='trigger_notify_box'></div>");
 
+        if(!$('.trigger_notify_box').length){
+            $('body').prepend("<div class='trigger_notify_box'></div>");
+        }
+        
         $('.trigger_notify_box').prepend(triggerContent);
         $('.trigger_notify').stop().animate({ 'left':'0','opacity':'1' },200,function(){
             $(this).find('.trigger_notify_timer').animate({ 'width':'100%' }, data.timer ,'linear',function(){

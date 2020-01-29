@@ -32,6 +32,7 @@
     cursor: pointer;
     font-size: 0.8em;
     overflow: hidden;
+    margin-bottom: 15px;
 }
 
 .trigger_notify_blue{
