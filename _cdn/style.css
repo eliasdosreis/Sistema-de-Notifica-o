@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.trigger_notify_box{
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 320px;
+    max-width: 90%;
+    padding-top: 15px;
+    padding-right: 15px;
+    z-index: 100;  
+}
+
+.trigger_notify_timer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4%;
+    background: rgba(0,0,0,0.5);
+    width: 50%;
+}
+
+.trigger_notify{
+    position: relative;
+    padding: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    overflow: hidden;
+}
+
+.trigger_notify_blue{
+    background-color: #2980b9;
+    color: #fff;
+}
+
+
